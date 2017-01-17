@@ -1,0 +1,111 @@
+/*
+ Theme Name:   Bacon Lee & Associates
+ Theme URI:    http://thinkcausality.com
+ Description:  Bacon Lee & Associates Custom Wordpress Theme by Causality
+ Author:       Causality
+ Author URI:   http://thinkcausality.com
+ Version:      1.0.0
+*/
+
+@import url('css/master.css');
+
+
+
+/*Team Member Page Styles*/
+.team-member-content{
+	display: inline-block;
+	float: left;
+	width: 495px;
+	height: 230px ;
+	background-color: #e4e4e4;
+	margin:0px 15px 15px 0px;
+	color: #a01d37 !important;
+}
+
+.team-member-picture{
+	width: 160px;
+	height: 210px;
+	display: inline-block;
+	float: left;
+	margin: 10px;
+}
+.team-member-info{
+	display: inline-block;
+	float: right;
+	width: 290px;
+	margin-right: 10px;
+}
+.team-member-quote{
+	font-size: 16px !important;
+	line-height: 1.5 !important;
+}
+.team-member-quote-author{
+	font-weight: 100;
+	font-size: 14px;
+	font-style: italic;
+}
+.team-member-name{
+	font-size: 18px !important;
+	font-weight: 700;
+	margin-bottom: 0px !important;
+}
+.team-member-email{
+	margin-top: -5px !important;
+	margin-bottom: 0px !important;
+}
+.team-member-bio-link{
+	margin: 10px 0px 0px 0px !important;
+}
+
+.team-member-bio-link a{
+	font-size: 12px !important;
+}
+
+.team-member-interior{
+	width: 100% !important;
+	margin-right: 0px !important;
+}
+
+#interior-page-sidebar #interior-page-sidebar-quote-text {
+	font-size: 18px !important;
+	text-align: left !important;
+	line-height: 1.7 !important;
+	font-weight: 100 !important;
+	font-style: italic !important;
+}
+
+/* Client Page */
+
+#client-left{
+	width: 300px;
+	display: inline-block;
+	float: left;
+}
+
+#client-right{
+	width: 300px;
+	display: inline-block;
+	float: right;
+}
+
+
+
+/* Blog Home Page */
+
+.blog-home h2{
+	font-size:24px !important;
+	-webkit-margin-before: 0em !important;
+	-webkit-margin-after: 0em !important;
+}
+
+.blog-home-date {
+	line-height: 1 !important;
+	-webkit-margin-before: 0em !important;
+	-webkit-margin-after: 0em !important;
+	font-weight: 700;
+	padding-top:20px
+}
+
+.blog-home hr{
+	margin: 30px 0px;
+}

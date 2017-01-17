@@ -1,0 +1,45 @@
+/* Firefox */
+ @-moz-document url-prefix() {
+
+     #homepage-content figure:first-of-type{
+        margin-left: -40px;
+    }
+
+    header ul {
+        padding-left: 0px;
+    }
+
+}
+
+
+/* IE 10 & 11 */
+@media all and (-ms-high-contrast:none) {
+
+/* IE 10 */
+#homepage-content{
+	margin: 0 !important;
+}
+
+#homepage-content ul{
+	padding-left: 20px !important;
+}
+
+ul{
+	padding-left: 0px;
+}
+
+
+/* IE 11 */
+*::-ms-backdrop, #homepage-content{
+	margin: 0 !important;
+}
+
+*::-ms-backdrop, #homepage-content ul{
+	padding-left: 20px !important;
+}
+
+*::-ms-backdrop, ul{
+	padding-left: 0px;
+}
+
+}

@@ -1,0 +1,535 @@
+/* Global Styles */
+
+*{
+    font-family: $global-font;
+}
+
+.container{
+    width: $container-width;
+    margin: 0 auto;
+}
+
+%zero-out-webkit-margins{
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}
+
+/* Header Styles */
+
+header{
+    width: 100%;
+    height: 130px;
+    background-color: $baconleered;
+
+    -webkit-box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.39);
+    -moz-box-shadow:    0px 10px 30px 0px rgba(50, 50, 50, 0.39);
+    box-shadow:         0px 10px 30px 0px rgba(50, 50, 50, 0.39);
+
+    a{
+        text-decoration: none;
+        font-weight: 700;
+        color:white;
+    }
+
+    a:hover{
+        opacity:0.5;
+    }
+
+    ul#menu-header-menu {
+        @extend %zero-out-webkit-margins;
+        float:right;
+        margin-top:55px;
+        margin-right: 25px;
+        -webkit-padding-start: 0px;
+
+        :last-child{
+           margin-right:0px;
+        }
+
+        li{
+            display: inline;
+            margin-right:35px;
+            position:relative;
+
+            a{
+                white-space:nowrap;
+            }
+        }
+        :hover > ul{
+            display: block;
+        }
+    }
+
+
+
+    ul.sub-menu{
+        display:none;
+        position: absolute;
+        left:-15px;
+        z-index: 10;
+        -webkit-padding-start: 0px;
+
+        li{
+            margin-right: 0px !important;
+            display: block !important;
+            background-color: $baconleered;
+            padding: 15px;
+            width: 100%;
+
+            a{
+                font-weight: 100;
+            }
+        }
+
+        :first-child{
+            padding-top: 30px;
+        }
+
+        :last-child{
+            padding-bottom: 25px;
+        }
+    }
+}
+
+#header_logo{
+    margin-top:30px;
+    margin-left: 25px;
+    float:left;
+    
+    img{
+        width: 300px;
+    }
+}
+
+
+
+
+
+
+
+
+/* Homepage Content */
+
+#homepage-photo-slider{
+    width:100%;
+    height: 500px;
+    background-image: url('../img/Recruiting.jpg') /*Image placeholder until slider loads */
+}
+
+#main-buttons-under-slider{
+    width: 100%;
+
+    :nth-child(1){
+        background-color:#0f5ca7;
+    }
+
+    :nth-child(2){
+        background-color:#4c9e45;
+    }
+
+    :nth-child(3){
+        background-color:#633294;
+    }
+
+    :nth-child(4){
+        background-color:$baconleered;
+    }
+
+    a{
+        margin:0 -4px 0 0;
+        padding: 14px 0px;
+        text-align:center;
+        color:white;
+        width:25%;
+        font-weight: 100;
+        font-size: 16px;
+        text-decoration: none;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    a:hover{
+        opacity:0.5;
+    }
+
+}
+
+#homepage-content{
+    margin: 25px;
+
+    @mixin homepage-grey-text($font-size) {
+        color:#939597;
+        font-size: $font-size;
+        font-weight: 100;
+    }
+
+    h1{
+        @include homepage-grey-text(24px);
+    }
+
+    ul{
+        -webkit-margin-before: 0em;
+        -webkit-margin-after: 0em;
+        -webkit-padding-start: 0px;
+    }
+
+    .homepage-image-boxes:nth-child(3){
+        margin-right:0px !important;
+    }
+
+
+
+    .homepage-image-boxes{
+        display: inline-block;
+        margin-right: 13px;
+
+        p{
+            @include homepage-grey-text(20px);
+            @extend %zero-out-webkit-margins;
+            margin-top:5px;
+        }
+    }
+
+    li{
+        list-style: none;
+    }
+
+    .homepage-image-rollover-box{
+        width: 345px;
+        height: 248px;
+        background-color: $baconleered;
+        position: relative;
+        margin-top: -20px;
+        cursor: default;
+        display: none;
+
+        h3{
+            color:white;
+            font-size: 20px;
+            padding: 20px 0px 0px 25px;
+        }
+
+        p{
+            color:white;
+            font-size: 13px;
+            margin:-10px 110px 0px 25px;
+            line-height: 1.6;
+            letter-spacing: 0.2px;
+        }
+
+        a{
+            padding: 10px 25px;
+            color:white;
+            text-decoration: none;
+            font-size: 11px;
+            background-color: #574d4d;
+            position: absolute;
+            bottom:0;
+            right: 0;
+        }
+
+        a:hover{
+            opacity: 0.8;
+        }
+    }
+
+}
+
+#homepage-quote{
+    margin:-20px 100px 20px;
+
+    #quote{
+        color: #D31145;
+        font-size: 38px;
+        text-align: center;
+    }
+
+    #author{
+        float: right;
+        color: #939597;
+        font-size: 18px;
+        margin-top: -20px;
+        font-weight: 100;
+
+        span{
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 18px;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+/* Footer */
+
+%footer-link-hover{
+    opacity: 0.6;
+}
+
+%footer-placeholder-text{
+    color: grey;
+    text-indent:10px;
+}
+
+footer{
+    width: 100%;
+    height: 270px;
+    background-color: #4d4b4c;
+    color:#fdfbe0;
+    font-size: 12px;
+
+    section{
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 10px;
+
+        h4{
+            font-size: 16px;
+        }
+    }
+
+    #job-board{
+        width: $container-width*.19;
+
+        img{
+            margin-top: 23px;
+        }
+
+        a{
+            color: #fdfbe0;
+            text-decoration: none;
+        }
+
+        a:hover{
+            @extend %footer-link-hover;
+        }
+    }
+
+    #newsletter-signup{
+        width: $container-width*.39;
+
+        input{
+            background-color: #2a2828;
+            border:0;
+            width:300px;
+            height: 40px;
+            color:#fdfbe0;
+            text-indent:10px;
+        }
+
+         ::-webkit-input-placeholder{
+           @extend %footer-placeholder-text;
+         }
+
+        :-moz-placeholder{
+           @extend %footer-placeholder-text;
+         }
+
+        ::-moz-placeholder {
+           @extend %footer-placeholder-text;
+         }
+
+        :-ms-input-placeholder {
+           @extend %footer-placeholder-text;
+         }
+
+        a{
+            float: left;
+            margin: 10px 0px 0px 203px;
+            background-color: #3a3a39;
+            border:0;
+            color: #fdfbe0;
+            padding:8px 20px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        a:hover{
+            @extend %footer-link-hover;
+        }
+    }
+
+    #social-icons{
+        width: $container-width*.19;
+
+        a:first-of-type{
+            margin-right:10px;
+        }
+
+        a:hover{
+            @extend %footer-link-hover;
+        }
+    }
+
+    #contact-us{
+        width: $container-width*.19;
+
+        a{
+            color:#fdfbe0;
+            text-decoration: none;
+        }
+
+        a:hover{
+            @extend %footer-link-hover;
+        }
+    }
+}
+
+
+
+
+
+/*  Interior Page */
+
+
+#interior-page-text{
+    min-height: 600px;
+    width:$container-width*.55;
+    margin-right: $container-width*.1;
+    margin-bottom: 60px;
+    display: inline-block;
+    vertical-align: top;
+    
+    a{
+        text-decoration: none;
+        color: $baconleered;
+        font-weight: 700;
+    }
+    
+    a:hover{
+            text-decoration: underline;
+            color: $baconleered;
+    }
+
+    h1, h2, h3, h4, h5, h6{
+        font-weight: 400;
+        color: $baconleered;
+    }
+
+    h1{
+        margin-top: 50px; /*Exists because this is page title */
+        font-size: 40px;
+    }
+
+    h2{
+        font-size: 32px;
+    }
+
+    h3{
+        font-size: 28px;
+    }
+
+    h4{
+        font-size: 24px;
+    }
+
+    p, ul{
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
+}
+
+#interior-page-sidebar{
+    width:$container-width*.34;
+    display: inline-block;
+    padding-bottom: 50px;
+    padding-top: 37px;
+
+    #interior-page-sidebar-quote{
+        margin-top:300px;
+    }
+
+    #interior-page-sidebar-quote-text{
+        color: $baconleered;
+        font-size: 30px;
+        text-align: right;
+    }
+
+    #interior-page-sidebar-quote-author{
+        float: right;
+        color: #939597;
+        font-size: 18px;
+        margin-top: -20px;
+        font-weight: 100;
+
+        span{
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+    }
+}
+
+
+
+/*  Blog Home Page (index.php) */
+
+
+
+
+
+/*  Blog Single Entry Page (single-'name'.php) */
+
+
+
+
+
+/*  Sidebar */
+
+.widget{
+    width: 85%;
+    margin: 35px auto 10px auto;
+    font-size: 0.92857em;
+    line-height: 1.84615em;
+
+    ul{
+        -webkit-padding-start: 0px !important;
+    }
+
+
+    li{
+        list-style-type: none;
+    }
+
+    ul li{
+        color: grey;
+    }
+
+    a{
+        text-decoration: none;
+        color: grey;
+    }
+
+    a:hover{
+            text-decoration: underline;
+            color: grey;
+    }
+    h1, h2, h3, h4, h5, h6{
+        font-weight: 400;
+        color: $baconleered;
+    }
+
+    h2{
+        font-size: 24px;
+    }
+
+}
+
